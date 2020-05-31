@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "description": "Boulder City Council ETL and API",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "nodemon app.js",
+    "nodemon": "nodemon ./bin/www",
     "test": "test"
   },
   "dependencies": {
@@ -14,9 +15,12 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "knex": "^0.21.1",
     "morgan": "~1.9.1",
     "neat-csv": "^5.2.0",
     "node-fetch": "^2.6.0",
+    "pg": "^8.2.1",
+    "postgres": "^1.0.2",
     "request": "^2.88.2"
   },
   "repository": {
@@ -34,5 +38,8 @@
   "bugs": {
     "url": "https://github.com/ericmbudd/boulder-council-emails-api/issues"
   },
-  "homepage": "https://github.com/ericmbudd/boulder-council-emails-api#readme"
+  "homepage": "https://github.com/ericmbudd/boulder-council-emails-api#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
