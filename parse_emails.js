@@ -35,26 +35,9 @@ function downloadFile(url, dest, cb) {
     });
 };
 
-async function myFetch() {
-    let response = await fetch('http://www-static.bouldercolorado.gov/docs/opendata/CouncilEmails_HTML2020.csv');
 
-    if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    } else {
-        console.log(response)
-        console.log ("got file")
-        /*
-        let myBlob = await response.blob();
-
-        let objectURL = URL.createObjectURL(myBlob);
-        let image = document.createElement('img');
-        image.src = objectURL;
-        document.body.appendChild(image);
-        */
-    }
-}
-
-function parseFromFile() {
+function parseFromLocalFile() {
+    console.log('hello')
     fs.readFile('./CouncilEmails_HTML2020.csv', async (err, data) => {
         let response = await neatCsv(data);
 
@@ -78,5 +61,6 @@ function parseFromFile( input ) {
     })
 };
 
+
 //parseEmails()
-module.exports = { myFetch, parseFromFile, downloadFile };
+module.exports = { parseFromFile, parseFromLocalFile, downloadFile };
