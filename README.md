@@ -1,4 +1,4 @@
-# bouldercouncilemailsapi
+# boulder-council-emails-api
 
 What this code will do (in progress):
 1. Download Boulder City Council emails file
